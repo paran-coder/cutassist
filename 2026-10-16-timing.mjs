@@ -1,0 +1,3 @@
+export function layout(clips){let total=0;const rows=clips.map((clip,index)=>{const start=total;total+=clip.out-clip.in;return {clip,index,start,end:total};});return {rows,total};}
+export function locate(l,time){if(!l.rows.length)return null;const t=Math.min(Math.max(0,Number(time)||0),Math.max(0,l.total-.001)),row=l.rows.find(r=>t<r.end)||l.rows.at(-1);return {...row,time:t,sourceTime:row.clip.in+t-row.start};}
+export function transitionAt(l,boundaries,time){for(let i=0;i<l.rows.length-1;i++){const b=boundaries[i],edge=l.rows[i].end,d=Math.min(Number(b?.seconds)||0,(l.rows[i].end-l.rows[i].start)/2,(l.rows[i+1].end-l.rows[i+1].start)/2);if(b?.kind!=='cut'&&d>0&&time>=edge-d/2&&time<edge+d/2)return {left:i,right:i+1,kind:b.kind,progress:(time-edge+d/2)/d};}return null;}

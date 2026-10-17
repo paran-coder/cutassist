@@ -1,0 +1,7 @@
+/* Shapes avoid font-dependent Roman numerals or emoji. */
+#play{display:inline-flex;align-items:center;justify-content:center}
+#play .transport-icon{display:block;position:relative;width:18px;height:18px;pointer-events:none}
+#play[data-playing="false"] .transport-icon::before{content:"";position:absolute;left:4px;top:1px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:12px solid currentColor}
+#play[data-playing="true"] .transport-icon::before,#play[data-playing="true"] .transport-icon::after{content:"";position:absolute;top:1px;width:5px;height:16px;background:currentColor;border-radius:1px}
+#play[data-playing="true"] .transport-icon::before{left:2px}
+#play[data-playing="true"] .transport-icon::after{right:2px}

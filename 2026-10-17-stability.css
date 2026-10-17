@@ -1,0 +1,8 @@
+#timelinecontent{min-height:190px}.timeline-row{position:absolute;left:0;right:0}.video-row{top:55px;height:80px}.subtitle-row{top:151px;height:30px}
+#track{top:0;height:80px}#captiontrack{top:0;height:30px}
+.tracklabel,.captiontracklabel{position:sticky;left:0;top:auto;width:60px;height:100%;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:4px}
+.captiontracklabel span{font-size:10px;color:var(--muted)}
+.recovery-controls{display:flex;align-items:center;gap:7px;flex-shrink:0}#autosavestatus{font-size:10px;color:var(--muted)}#autosavestatus.error{max-width:230px}#openrecovery{font-size:11px;padding:3px 7px}#recoverydialog{width:min(680px,94vw)}#recoverydetails{white-space:pre-wrap;max-height:180px;overflow:auto}#recoverystatus{white-space:pre-wrap;font-size:12px}
+.timelinefoot #message{flex:1;min-width:0}.timelinefoot{flex-wrap:wrap}@media(max-width:1000px){.timelinefoot>.hint{display:none}}@media(max-height:720px){.timelinefoot{gap:6px}}
+
+.captionreviews{padding:0 0 0 20px;max-height:100px;overflow:auto;font-size:11px;color:#e4d59c}.captionreviews:empty{display:none}

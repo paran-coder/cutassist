@@ -1,0 +1,1 @@
+export function shiftWindowChunks(chunks,offset,duration){const result=[];for(const chunk of chunks){const [a,b]=chunk.timestamp||[];if(!Number.isFinite(a))continue;const start=Math.max(0,Math.min(duration,a)),end=b==null?duration:Math.max(0,Math.min(duration,b));if(Number.isFinite(end)&&end>start)result.push({...chunk,timestamp:[offset+start,offset+end]});}return result;}

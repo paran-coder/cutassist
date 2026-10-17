@@ -1,0 +1,6 @@
+/* Tooltips use native title attributes without changing toolbar height. */
+.timelinescroll{scrollbar-gutter:stable}
+#ruler{overflow:hidden}
+
+#loadbutton[aria-disabled="true"]{opacity:.4;cursor:default}
+#loadbutton[aria-disabled="true"]:hover{border-color:#3b404b}
